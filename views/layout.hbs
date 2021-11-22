@@ -15,6 +15,20 @@
             <div class="nav">
                 <h2><i class="fas fa-camera-retro" style="color:brown"></i>Pick 6 Pics</h2>
                 <p>Create your personal global map by choosing your favorite picture of each continent.</p>
+
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="">
+                    <a class="" href="/">Home</a>
+                    <a class="" href="/auth/login">Log In</a>
+                    <a class="" href="/auth/signup">Sign Up</a>
+                    <a class="" href="/UserFavs">Favorites</a>
+                    <a class="" href="/auth/logout">Log out</a>
+                    </div>
+                </div>
+
                 <div class="search-box">
                     <input type="text" id="input" placeholder="Search for a continent... e.g.'Africa'"><i onclick="loadImg() " class="fas fa-search"></i>
 
@@ -26,12 +40,12 @@
 
     <div class="container">
 
-        <div class="grid">
+        <div class="grid" id="grid">
         </div>
 
     </div>
 
-
+    {{{body}}}
     
     <script src="/js/script.js"></script>
 </body>

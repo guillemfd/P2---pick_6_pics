@@ -1,8 +1,8 @@
 const router = require("express").Router();
 
-/* GET home page */
+/* GET 6 continents page */
 router.get("/", (req, res, next) => {
-  res.render("home");
+  res.render("search.hbs");
 });
 
 module.exports = router;
