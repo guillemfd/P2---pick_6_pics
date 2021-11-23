@@ -117,7 +117,7 @@ router.post('/login', async (req, res)=>{
     } else {
       req.session.loggedUser = userFromDB
       console.log('SESSION ======> ', req.session)
-      res.redirect('/favorites')
+      res.redirect('/search')
     }
   }
 })
