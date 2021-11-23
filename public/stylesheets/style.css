@@ -27,8 +27,20 @@ header{
     padding: 25px 0px;
 }
 
-.nav h2{
-    font-size: 2rem;
+.logo{
+    width: 500px;
+}
+
+.nav p{
+    font-size: 1rem;
+}
+
+.nav a{
+    color: whitesmoke;
+}
+
+.nav-btn{
+    color: whitesmoke;
 }
 
 .search-box{
