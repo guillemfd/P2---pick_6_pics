@@ -102,6 +102,7 @@ router.post("/signup", async (req, res, next) => {
 
 router.post('/login', async (req, res)=>{
   const {username, password} = req.body
+  console.log(req.body)
 
   if(!username || !password){ //Si dejan algun campo vacio
     res.render("auth/login", {errorMsg: "You need to fill all inputs"})

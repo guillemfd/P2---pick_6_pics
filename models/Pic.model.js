@@ -4,7 +4,7 @@ const picSchema = new Schema(
   {
     name: { type: String, required: true },
     portfolio: { type: String },
-    thumbnail: { type: String },
+    img: { type: String },
   },
   { timestamps: true }
 );
