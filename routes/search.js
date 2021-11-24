@@ -21,7 +21,7 @@ router.get("/africa", isLoggedIn, async (req, res, next) => {
     const axiosCall = await axios("https://api.unsplash.com/search/photos?query=africa&limit=50&per_page=50&client_id=LwARo21TFMLDkRjpSxHDnwqKV9Hzz-07azjP4Fco4yU")
     const results = axiosCall.data.results
 
-    // console.log(results)
+    console.log(results)
     res.render("continents/africa.hbs", { results });
   }
   catch(err){

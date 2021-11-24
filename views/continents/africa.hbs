@@ -5,19 +5,25 @@
     <link rel="stylesheet" href="fluid-gallery.css">     --}}
     
 
-    <div class="containerr">
+    <div class="container">
 
-        <h1 class="heading">Africa</h1>
+        <h1 class="gallery-title">Africa</h1>
 
         {{!-------- XQ NO PUEDO DEJAR ESPACIO CON FOTOS?? --------}}
 
         <div class="gallery">
-            <div class="gallery-item">
+            {{!-- <div class="gallery-item"> --}}
                 {{#each results}}
-                    <a class="lightbox" href={{this.urls.regular}}><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
-                    <p>Pic taken by <a href={{this.user.links.html}}>{{this.user.name}}</a></p><button type="button" id="favButton" onclick="addFav()"></button>
+                    <div class="my-card">
+                        <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
+                        <p>Pic taken by <a href={{this.user.links.html}} target="_blank">{{this.user.name}}</a></p>
+                        <a href={{this.urls.full}} target="_blank"><p>Full size download</p></a>
+                        <a href="/favorites" target="_blank" ><button id="favButton">Pick this Pic! 🤍</button></a>
+
+                        {{!-- <button type="button" id="favButton" onclick="addFav()"></button> --}}
+                    </div>
                 {{/each}}
-            </div>
+            {{!-- </div> --}}
         </div>
     </div>
     
