@@ -18,10 +18,10 @@ const {isLoggedIn} = require("../middleware/route-gard")
 // ----------AFRICA----------------------AFRICA----------------------AFRICA----------------------AFRICA----------------------AFRICA------------
 router.get("/africa", isLoggedIn, async (req, res, next) => {
   try{
-    const axiosCall = await axios("https://api.unsplash.com/search/photos?query=africa&limit=50&per_page=50&client_id=LwARo21TFMLDkRjpSxHDnwqKV9Hzz-07azjP4Fco4yU")
+    const axiosCall = await axios(`https://api.unsplash.com/search/photos?query=africa&limit=50&per_page=50&client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
     const results = axiosCall.data.results
 
-    console.log(results)
+    // console.log(results)
     res.render("continents/africa.hbs", { results });
   }
   catch(err){
@@ -34,7 +34,7 @@ router.get("/africa", isLoggedIn, async (req, res, next) => {
 //----------AMERICA----------------------AMERICA----------------------AMERICA----------------------AMERICA----------------------AMERICA--------------
 router.get("/america", isLoggedIn, async (req, res, next) => {
   try{
-    const axiosCall = await axios("https://api.unsplash.com/search/photos?query=america-landscape&limit=50&per_page=50&client_id=LwARo21TFMLDkRjpSxHDnwqKV9Hzz-07azjP4Fco4yU")
+    const axiosCall = await axios(`https://api.unsplash.com/search/photos?query=america-landscape&limit=50&per_page=50&client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
     const results = axiosCall.data.results
 
     console.log(results)
@@ -51,7 +51,7 @@ router.get("/america", isLoggedIn, async (req, res, next) => {
 //----------ANTARTICA----------------------ANTARTICA----------------------ANTARTICA----------------------ANTARTICA----------------------ANTARTICA----------
 router.get("/antartica", isLoggedIn, async (req, res, next) => {
   try{
-    const axiosCall = await axios("https://api.unsplash.com/search/photos?query=antartica&limit=50&per_page=50&client_id=LwARo21TFMLDkRjpSxHDnwqKV9Hzz-07azjP4Fco4yU")
+    const axiosCall = await axios(`https://api.unsplash.com/search/photos?query=antartica&limit=50&per_page=50&client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
     const results = axiosCall.data.results
 
     console.log(results)
@@ -67,7 +67,7 @@ router.get("/antartica", isLoggedIn, async (req, res, next) => {
 //----------ASIA----------------------ASIA----------------------ASIA----------------------ASIA----------------------ASIA----------
 router.get("/asia", isLoggedIn, async (req, res, next) => {
   try{
-    const axiosCall = await axios("https://api.unsplash.com/search/photos?query=asia&limit=50&per_page=50&client_id=LwARo21TFMLDkRjpSxHDnwqKV9Hzz-07azjP4Fco4yU")
+    const axiosCall = await axios(`https://api.unsplash.com/search/photos?query=asia&limit=50&per_page=50&client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
     const results = axiosCall.data.results
 
     console.log(results)
@@ -83,7 +83,7 @@ router.get("/asia", isLoggedIn, async (req, res, next) => {
 //----------EUROPE----------------------EUROPE----------------------EUROPE----------------------EUROPE----------------------EUROPE----------
 router.get("/europe", isLoggedIn, async (req, res, next) => {
   try{
-    const axiosCall = await axios("https://api.unsplash.com/search/photos?query=europe&limit=50&per_page=50&client_id=LwARo21TFMLDkRjpSxHDnwqKV9Hzz-07azjP4Fco4yU")
+    const axiosCall = await axios(`https://api.unsplash.com/search/photos?query=europe&limit=50&per_page=50&client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
     const results = axiosCall.data.results
 
     console.log(results)
@@ -99,7 +99,7 @@ router.get("/europe", isLoggedIn, async (req, res, next) => {
 //----------OCEANIA----------------------OCEANIA----------------------OCEANIA----------------------OCEANIA----------------------OCEANIA----------
 router.get("/oceania", isLoggedIn, async (req, res, next) => {
   try{
-    const axiosCall = await axios("https://api.unsplash.com/search/photos?query=oceania&limit=50&per_page=50&client_id=LwARo21TFMLDkRjpSxHDnwqKV9Hzz-07azjP4Fco4yU")
+    const axiosCall = await axios(`https://api.unsplash.com/search/photos?query=oceania&limit=50&per_page=50&client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
     const results = axiosCall.data.results
 
     console.log(results)

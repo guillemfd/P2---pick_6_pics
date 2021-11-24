@@ -16,7 +16,10 @@
                     <div class="card-text">
                         <p>Pic taken by <a href={{this.user.links.html}} target="_blank">{{this.user.name}}</a></p>
                         <a href={{this.urls.full}} target="_blank"><p>Full size download</p></a>
-                        <a href="/UserFavs" target="_blank" ><button id="favButton">Pick this Pic!</button></a>
+                        <form method="POST" action="/favorites/create/{{this.id}}">
+                            <button type="submit" id="favButton">Pick this Pic!</button>
+                        </form>
+                        {{!-- <a href="/UserFavs" target="_blank" ><button type="submit" id="favButton">Pick this Pic!</button></a> --}}
                     </div>
                 </div>
             {{/each}}

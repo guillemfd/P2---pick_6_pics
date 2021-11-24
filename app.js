@@ -48,7 +48,7 @@ app.locals.title = `${capitalized(projectName)} created by Guillem using IronLau
 app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 app.use("/search", require("./routes/search.js"))
-app.use("/UserFavs", require("./routes/favorites.js"))
+app.use("/favorites", require("./routes/favorites.js"))
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

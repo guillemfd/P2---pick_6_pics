@@ -131,6 +131,8 @@ img {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0.3rem;
     row-gap: 0.3rem;
+    flex: 33%;
+
 }
 
 .gallery img {
@@ -148,7 +150,7 @@ transition: transform 400ms ease-out;
 
 .my-card {
     flex-direction: column;
-
+    flex: 33%;
 }
 
 .card-text {
@@ -179,6 +181,7 @@ transition: transform 400ms ease-out;
     box-shadow: 0 0 40px 40px #ff3232 inset;
 }
 
+
 /* ------SEARCH BUTTONS----------------SEARCH BUTTONS----------------SEARCH BUTTONS----------------SEARCH BUTTONS---------- */
 #africaBtn {
     color:whitesmoke;
@@ -191,6 +194,7 @@ transition: transform 400ms ease-out;
     font-weight: bold;
     font-size: 2.3em;
     width: 300PX;
+    width: 100%;
     height: 60px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
@@ -212,6 +216,7 @@ transition: transform 400ms ease-out;
     font-weight: bold;
     font-size: 2.3em;
     width: 300PX;
+    width: 100%;
     height: 60px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
@@ -232,6 +237,7 @@ transition: transform 400ms ease-out;
     font-weight: bold;
     font-size: 2.3em;
     width: 300PX;
+    width: 100%;
     height: 60px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
@@ -245,7 +251,7 @@ transition: transform 400ms ease-out;
 #asiaBtn {
     color:whitesmoke;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 50px;
     padding-top: 0px;  
     background-color: #ff000000;
     border: 1px solid #39D8D8;
@@ -253,6 +259,7 @@ transition: transform 400ms ease-out;
     font-weight: bold;
     font-size: 2.3em;
     width: 300PX;
+    width: 100%;
     height: 60px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
@@ -265,7 +272,7 @@ transition: transform 400ms ease-out;
 #europeBtn {
     color:whitesmoke;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 50px;
     padding-top: 0px;  
     background-color: #ff000000;
     border: 1px solid #39D8D8;
@@ -273,6 +280,7 @@ transition: transform 400ms ease-out;
     font-weight: bold;
     font-size: 2.3em;
     width: 300PX;
+    width: 100%;
     height: 60px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
@@ -285,14 +293,15 @@ transition: transform 400ms ease-out;
 #oceaniaBtn {
     color:whitesmoke;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 50px;
     padding-top: 0px;  
     background-color: #ff000000;
     border: 1px solid #39D8D8;
     opacity: 0.8;
     font-weight: bold;
     font-size: 2.3em;
-    width: 300PX;
+    width: 300px;
+    width: 100%;
     height: 60px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
@@ -302,9 +311,33 @@ transition: transform 400ms ease-out;
     box-shadow: 0 0 40px 40px #1ab6bb inset;
 }
 
+.search-row{
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.search-buttons{
+    flex: 33%;
+    padding: 50px;
+    /* margin-top: 20px; */
+}
+
+.search-buttons a{
+    margin-top: 20px;
+}
+
+
 /* ------------ RESPONSIVE ------------------ RESPONSIVE ----------- RESPONSIVE ------ */
 
-@media(min-width:768px){
+@media(max-width:768px){
+    .search-buttons{
+        flex: 100%;
+    }
+
+    /* .gallery{
+        flex: 100%;
+    } */
     /* .img{
         width: 100%;
     }

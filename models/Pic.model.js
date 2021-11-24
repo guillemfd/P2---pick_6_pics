@@ -2,9 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const picSchema = new Schema(
   {
-    name: { type: String, required: true },
+    image: { type: String, required: true },
+    photographer: { type: String, required: true },
+    country: { type: String },
     portfolio: { type: String },
-    img: { type: String },
+    downloads: {type: Number},
   },
   { timestamps: true }
 );
