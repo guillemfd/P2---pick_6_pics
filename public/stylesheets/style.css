@@ -116,6 +116,7 @@ img {
 
 .gallery-title{
     text-align: center;
+    font-size: 5em;
 }
 
 /* .gallery-container {
@@ -142,25 +143,31 @@ transition: transform 400ms ease-out;
 }
 
 .gallery-image:hover {
-	transform: scale(1.03);
+	transform: scale(1.01);
 }
 
 .my-card {
     flex-direction: column;
+
+}
+
+.card-text {
+    margin: 15px 0px 0px 15px;
+    line-height : 5px;
 }
 
 #favButton {
     color:whitesmoke;
-    margin-top: -5px;
+    justify-content: center;
+    margin-top: 0px;
     padding-top: 0px;  
-    background-color: #ff00002d;
-    border: 2px solid #ff0000;
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
     opacity: 0.8;
     font-weight: bold;
     font-size: 1em;
     width: 160px;
-    height: 50px;
-    /* height: 150px; */
+    height: 40px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }

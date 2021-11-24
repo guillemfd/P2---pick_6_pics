@@ -9,21 +9,17 @@
 
         <h1 class="gallery-title">Africa</h1>
 
-        {{!-------- XQ NO PUEDO DEJAR ESPACIO CON FOTOS?? --------}}
-
         <div class="gallery">
-            {{!-- <div class="gallery-item"> --}}
-                {{#each results}}
-                    <div class="my-card">
-                        <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
+            {{#each results}}
+                <div class="my-card">
+                    <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
+                    <div class="card-text">
                         <p>Pic taken by <a href={{this.user.links.html}} target="_blank">{{this.user.name}}</a></p>
                         <a href={{this.urls.full}} target="_blank"><p>Full size download</p></a>
-                        <a href="/favorites" target="_blank" ><button id="favButton">Pick this Pic! 🤍</button></a>
-
-                        {{!-- <button type="button" id="favButton" onclick="addFav()"></button> --}}
+                        <a href="/UserFavs" target="_blank" ><button id="favButton">Pick this Pic!</button></a>
                     </div>
-                {{/each}}
-            {{!-- </div> --}}
+                </div>
+            {{/each}}
         </div>
     </div>
     

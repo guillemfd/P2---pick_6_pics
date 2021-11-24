@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h1 class="gallery-title">Oceania</h1>
+
+    <div class="gallery">
+        {{#each results}}
+            <div class="my-card">
+                <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
+                <div class="card-text">
+                    <p>Pic taken by <a href={{this.user.links.html}} target="_blank">{{this.user.name}}</a></p>
+                    <a href={{this.urls.full}} target="_blank"><p>Full size download</p></a>
+                    <a href="/UserFavs" target="_blank" ><button id="favButton">Pick this Pic!</button></a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
