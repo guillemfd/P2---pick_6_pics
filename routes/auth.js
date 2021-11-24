@@ -107,7 +107,7 @@ router.post('/login', async (req, res)=>{
   if(!username || !password){ //Si dejan algun campo vacio
     res.render("auth/login", {errorMsg: "You need to fill all inputs"})
   }
-  console.log('here')
+  // console.log('hola')
   const userFromDB = await User.findOne({username})
   if(!userFromDB){ //Si el usuario no existe
     res.render("auth/login", {errorMsg: "The user does not exist"})

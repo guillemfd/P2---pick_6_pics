@@ -1,6 +1,36 @@
-    <ul>
-    {{#each results}}
-        <img src={{this.urls.regular}} alt="Pictaken by {{this.user.name}}" style="width: 500px;" >
-        <p>Pic taken by {{this.user.name}}</p><button>Pick this Pic!</button>
-    {{/each}}
-    </ul>
+    {{!-- ---- CSS GALERIA  ---- --}}
+    {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
+    {{!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="fluid-gallery.css">     --}}
+    
+
+    <div class="containerr">
+
+        <h1 class="heading">Africa</h1>
+
+        {{!-------- XQ NO PUEDO DEJAR ESPACIO CON FOTOS?? --------}}
+
+        <div class="gallery">
+            <div class="gallery-item">
+                {{#each results}}
+                    <a class="lightbox" href={{this.urls.regular}}><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
+                    <p>Pic taken by <a href={{this.user.links.html}}>{{this.user.name}}</a></p><button type="button" id="favButton" onclick="addFav()"></button>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+{{!-- <ul>
+{{#each results}}
+    <img src={{this.urls.regular}} alt="Pictaken by {{this.user.name}}" style="width: 500px;" >
+    <p>Pic taken by {{this.user.name}}</p><button>Pick this Pic!</button>
+{{/each}}
+</ul> --}}
