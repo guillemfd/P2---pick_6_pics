@@ -172,8 +172,134 @@ transition: transform 400ms ease-out;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
+
+
+
 #favButton:hover {
     box-shadow: 0 0 40px 40px #ff3232 inset;
+}
+
+/* ------SEARCH BUTTONS----------------SEARCH BUTTONS----------------SEARCH BUTTONS----------------SEARCH BUTTONS---------- */
+#africaBtn {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2.3em;
+    width: 300PX;
+    height: 60px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#africaBtn:hover {
+    box-shadow: 0 0 40px 40px #a52727 inset;
+}
+
+
+#americaBtn {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2.3em;
+    width: 300PX;
+    height: 60px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#americaBtn:hover {
+    box-shadow: 0 0 40px 40px #ca870a inset;
+}
+
+#antarticaBtn {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2.3em;
+    width: 300PX;
+    height: 60px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#antarticaBtn:hover {
+    box-shadow: 0 0 40px 40px #ffffff inset;
+    color: grey;
+}
+
+#asiaBtn {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2.3em;
+    width: 300PX;
+    height: 60px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#asiaBtn:hover {
+    box-shadow: 0 0 40px 40px #babd23 inset;
+}
+
+#europeBtn {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2.3em;
+    width: 300PX;
+    height: 60px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#europeBtn:hover {
+    box-shadow: 0 0 40px 40px #251abb inset;
+}
+
+#oceaniaBtn {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2.3em;
+    width: 300PX;
+    height: 60px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#oceaniaBtn:hover {
+    box-shadow: 0 0 40px 40px #1ab6bb inset;
 }
 
 /* ------------ RESPONSIVE ------------------ RESPONSIVE ----------- RESPONSIVE ------ */

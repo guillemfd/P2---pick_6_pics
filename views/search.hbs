@@ -1,8 +1,14 @@
 <h2>To wich continent do you want to have a look?</h2>
 
-    <ul>
-    {{#each results}}
-        <img src={{this.urls.regular}} alt="Pictaken by {{this.user.name}}" style="width: 500px;" >
-        <p>Pic taken by {{this.user.name}}</p><button>Pick this Pic!</button>
-    {{/each}}
-    </ul>
+    <div>
+        <a href="africa" target="_blank" ><button id="africaBtn">Africa</button></a>
+        <a href="america" target="_blank" ><button id="americaBtn">America</button></a>
+        <a href="antartica" target="_blank" ><button id="antarticaBtn">Antartica</button></a>
+
+    </div>
+
+    <div>
+        <a href="asia" target="_blank" ><button id="asiaBtn">Asia</button></a>
+        <a href="europe" target="_blank" ><button id="europeBtn">Europe</button></a>
+        <a href="oceania" target="_blank" ><button id="oceaniaBtn">Oceania</button></a>
+    </div>
