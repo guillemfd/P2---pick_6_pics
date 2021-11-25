@@ -47,4 +47,27 @@ router.post("/create/:id", async (req, res) => {  //:continent como params
 });
 
 
+//---------- DELETE FAVORITE PICS BY id ----------------------------------------------------------------------------------------------------------------
+router.post("/delete/:id", async (req, res) => { 
+
+  const deletePicById = async (id)=>{
+    try{
+      const deletedPic = await Student.findByIdAndDelete(id, {new: true})
+      console.log("helloooo")
+    }catch(err){
+      console.log(err)
+    }
+
+    res.redirect(`/favorites`)
+  }
+});
+
+// router.post("/delete/:id", async (req, res) => { 
+//   await User.findByIdAndUpdate(req.session.loggedUser._id,
+//     {$pop: {pics}},);
+
+//   res.redirect(`/favorites`)
+// });
+
+
 module.exports = router;

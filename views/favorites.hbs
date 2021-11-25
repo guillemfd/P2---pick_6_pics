@@ -1,14 +1,3 @@
-{{!-- <ul>
-  {{#each pics}}
-    <img src={{this.image}} />
-    <li>{{this.photographer}}</li>
-    <li>{{this.country}}</li>
-    <li>{{this.portfolio}}</li> 
-    <li>{{this.downloads}}</li> 
-  {{/each}}
-</ul> --}}
-
-
 <div class="container">
     <h1 class="gallery-title">These are your 6 picked pics!</h1>
     <div class="gallery">
@@ -17,13 +6,12 @@
                 <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.image}} alt="Pic taken by {{this.photographer}}"></a>
                 <div class="card-text">
                     <p>Pic taken by <a href={{this.portfolio}} target="_blank">{{this.photographer}}</a> in {{this.country}}, with a total of {{this.downloads}} downloads.</p>
-
-
                     <a href={{this.fullimage}} target="_blank"><p>Full size download</p></a>
-                    {{!-- <form method="POST" action="/favorites/create/{{this.id}}">
-                        <button type="submit" id="removeFav">Remove pic</button>
-                    </form> --}}
-                    {{!-- <a href="/UserFavs" target="_blank" ><button type="submit" id="favButton">Pick this Pic!</button></a> --}}
+
+                    <form method="POST" action="/favorites/delete/{{this.id}}">
+                        <button type="submit" id="unFavButton">Remove pic</button>
+                    </form>
+
                 </div>
             </div>
         {{/each}}

@@ -1,41 +1,23 @@
-    {{!-- ---- CSS GALERIA  ---- --}}
-    {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
-    {{!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="fluid-gallery.css">     --}}
-    
+ <div class="container">
 
-    <div class="container">
+    <h1 class="gallery-title">Africa</h1>
 
-        <h1 class="gallery-title">Africa</h1>
-
-        <div class="gallery">
-            {{#each results}}
-                <div class="my-card">
-                    <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
-                    <div class="card-text">
-                        <p>Pic taken by <a href={{this.user.links.html}} target="_blank">{{this.user.name}}</a></p>
-                        <a href={{this.urls.full}} target="_blank"><p>Full size download</p></a>
-                        <form method="POST" action="/favorites/create/{{this.id}}">
-                            <button type="submit" id="favButton">Pick this Pic!</button>
-                        </form>
-                        {{!-- <a href="/UserFavs" target="_blank" ><button type="submit" id="favButton">Pick this Pic!</button></a> --}}
-                    </div>
+    <div class="gallery">
+        {{#each results}}
+            <div class="my-card">
+                <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.urls.regular}} alt="Pic taken by {{this.user.name}}"></a>
+                <div class="card-text">
+                    <p>Pic taken by <a href={{this.user.links.html}} target="_blank">{{this.user.name}}</a></p>
+                    <a href={{this.urls.full}} target="_blank"><p>Full size download</p></a>
+                    <form method="POST" action="/favorites/create/{{this.id}}">
+                        <button type="submit" id="favButton">Pick this Pic!</button>
+                    </form>
                 </div>
-            {{/each}}
-        </div>
+            </div>
+        {{/each}}
     </div>
+</div>
     
 
 
 
-
-
-
-
-{{!-- <ul>
-{{#each results}}
-    <img src={{this.urls.regular}} alt="Pictaken by {{this.user.name}}" style="width: 500px;" >
-    <p>Pic taken by {{this.user.name}}</p><button>Pick this Pic!</button>
-{{/each}}
-</ul> --}}
