@@ -1,9 +1,44 @@
-<h1>{{title}} 🚀</h1>
 
-<div>
-    <h3>Already a user? Then Log In</h3>
-</div>
-
-<div>
-    <h3>If you are a new wanderlust here, then Sign Up</h3>
+<div class="index-container">
+    <div class="index-login">
+        <h4>Already a user? Then Log In</h4>
+        <form action="/auth/login" method="POST">
+            <div>
+                <input type="text" class="text-form" name="username" placeholder="Username">
+            </div>
+            <div>
+                <input type="password" class="text-form" name="password" placeholder="Password (min. 8 caracters)">
+            </div>
+            <button type="submit" id="authButton">Submit</button>
+        </form>
+        {{#if msg}}
+            <p>{{msg}}</p>
+        {{/if}}
+    </div>
+    
+    <div class="index-signup">
+        <h4>If you are a new wanderlust soul here, then Sign Up</h4>
+        <div class="signup-container">
+            <form action="/auth/signup" method="POST">
+                {{!-- <div class="form-icon">
+                    <span><i class="icon icon-user"></i></span>
+                </div> --}}
+                <div>
+                    <input type="text" name="username" class="text-form" id="username" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" name="password" class="text-form" id="password" placeholder="Password">
+                </div>
+                <div>
+                    <input type="password" name="passwordRepeat" class="text-form" id="passwordRepeat" placeholder="Repeat password">
+                </div>
+                <div>
+                    <input type="email" name="email" class="text-form" id="email" placeholder="email">
+                </div>
+                <div>
+                    <button type="submit" id="authButton">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

@@ -59,6 +59,70 @@ header{
     color: whitesmoke;
 }
 
+/* ------------------------------------------------------------------ NAV ------------------------------------------------- */
+/* ----------------------------------------------------------------- HOME ------------------------------------------------- */
+
+.text-form {
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-color: 2px solid #39D8D8;
+}
+
+#authButton {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #39D8D8;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 1em;
+    width: 160px;
+    height: 40px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#authButton:hover {
+    box-shadow: 0 0 40px 40px #39D8D8 inset;
+}
+
+.index-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.index-login {
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px 2px #39D8D8;
+    margin: 50px 5% 0 5%;
+    padding: 20px;
+    width: 30%
+}
+
+.index-signup {
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px 2px #39D8D8;
+    margin: 50px 5% 0 5%;
+    padding: 20px;
+    width: 30%
+}
+
+/* ----------------------------------------------------------------- HOME ------------------------------------------------- */
+
 .search-box{
     position: relative;
     width: 500px;
@@ -125,7 +189,7 @@ img {
 } */
 
 .gallery {
-    width: 100%;
+    width: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -173,8 +237,6 @@ transition: transform 400ms ease-out;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
-
-
 
 
 #favButton:hover {
@@ -312,15 +374,15 @@ transition: transform 400ms ease-out;
 }
 
 .search-row{
-    display: flex;
+     display: flex;
     padding: 50px;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap; */
 }
 
 .search-buttons{
-    flex: 33%;
-    padding: 50px;
-    /* margin-top: 20px; */
+     flex: 33%;
+   padding: 2px;
+    margin-top: 20px;
 }
 
 .search-buttons a{
@@ -331,9 +393,9 @@ transition: transform 400ms ease-out;
 /* ------------ RESPONSIVE ------------------ RESPONSIVE ----------- RESPONSIVE ------ */
 
 @media(max-width:768px){
-    .search-buttons{
+    /* .search-buttons{
         flex: 100%;
-    }
+    } */
 
     /* .gallery{
         flex: 100%;
@@ -355,7 +417,7 @@ transition: transform 400ms ease-out;
     } */
 }
 
-@media(min-width:480px){
+@media(max-width:480px){
     /* .nav h2{
         text-align: center;
         font-size: 1.5rem;
@@ -376,8 +438,8 @@ transition: transform 400ms ease-out;
 }
 
 
-/* @media(min-width:100px){
-    .gallery{
+@media(max-width:100px){
+    /* .gallery{
         grid-template-columns: repeat(1, 1fr);
-    }
-} */
+    } */
+}

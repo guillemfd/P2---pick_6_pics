@@ -1,14 +1,17 @@
-<form action="/auth/login" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
-
-   <button type="submit">Submit</button>
-</form>
-
-{{#if errorMsg}}
-   {{errorMsg}}
-{{/if}}
+<div class="index-container">
+    <div class="index-login">
+        <h4>Already a user? Then Log In</h4>
+        <form action="/auth/login" method="POST">
+            <div>
+                <input type="text" class="text-form" name="username" placeholder="Username">
+            </div>
+            <div>
+                <input type="password" class="text-form" name="password" placeholder="Password (min. 8 caracters)">
+            </div>
+            <button type="submit" id="authButton">Submit</button>
+        </form>
+        {{#if msg}}
+            <p>{{msg}}</p>
+        {{/if}}
+    </div>
+</div>
