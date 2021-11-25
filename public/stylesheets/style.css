@@ -155,7 +155,7 @@ transition: transform 400ms ease-out;
 
 .card-text {
     margin: 15px 0px 0px 15px;
-    line-height : 5px;
+    line-height : 25px;
 }
 
 #favButton {

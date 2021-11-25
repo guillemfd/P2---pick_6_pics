@@ -9,14 +9,19 @@ const User = require("../models/User.model");
 
 
 /* GET favorites page */
-router.get("/", isLoggedIn, (req, res, next) => {
-  res.render("./favorites.hbs");
+router.get("/", isLoggedIn, async (req, res, next) => {
+
+  const currUser = await User.findById(req.session.loggedUser._id).populate('pics')
+
+  res.render("./favorites.hbs", {pics: currUser.pics} );
 });
 
 
 
 //---------- CREATE FAVORITE PICS BY id ----------------------------------------------------------------------------------------------------------------
-router.post("/create/:id", async (req, res) => {
+router.post("/create/:id", async (req, res) => {  //:continent como params 
+
+  //llamada a base de datos y comprobar que en el array de pics del usuario no hay ninguna pic con el continente recibido por params
 
   const axiosCall = await axios(`https://api.unsplash.com/photos/${req.params.id}?client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
     // console.log(axiosCall.data)
@@ -28,20 +33,17 @@ router.post("/create/:id", async (req, res) => {
     photographer: infoFromPic.user.name,
     country: infoFromPic.location.country,
     portfolio: infoFromPic.user.links.html,
-    downloads: infoFromPic.downloads
+    downloads: infoFromPic.downloads,
+    fullimage: infoFromPic.urls.full
+
   }
 
-  // console.log(dataToUpload)
-
     const picToFavs = await Pic.create(dataToUpload)
-    console.log(picToFavs._id)
 
     await User.findByIdAndUpdate(req.session.loggedUser._id,
-      {$push: {pics: picToFavs._id}},
-      {new: true}
-    );
+      {$push: {pics: picToFavs._id}},);
 
-    res.redirect('/favorites')
+    res.redirect(`/favorites`)
 });
 
 

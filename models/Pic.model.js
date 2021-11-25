@@ -7,6 +7,8 @@ const picSchema = new Schema(
     country: { type: String },
     portfolio: { type: String },
     downloads: {type: Number},
+    fullimage: { type: String },
+    //continent: {enum: ['Africa', 'Oceania']} //TODO: finish
   },
   { timestamps: true }
 );
