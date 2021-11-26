@@ -3,7 +3,7 @@
     <div class="gallery">
         {{#each pics}}
             <div class="my-card">
-                <a href={{this.urls.regular}} target="_blank"><img class="gallery-image" src={{this.image}} alt="Pic taken by {{this.photographer}}"></a>
+                <a href={{this.image}} target="_blank"><img class="gallery-image" src={{this.image}} alt="Pic taken by {{this.photographer}}"></a>
                 <div class="card-text">
                     <p>Pic taken by <a href={{this.portfolio}} target="_blank">{{this.photographer}}</a> in {{this.country}}, with a total of {{this.downloads}} downloads.</p>
                     <a href={{this.fullimage}} target="_blank"><p>Full size download</p></a>
@@ -11,7 +11,7 @@
                     <form method="POST" action="/favorites/delete/{{this.id}}">
                         <button type="submit" id="unFavButton">Remove pic</button>
                     </form>
-
+                    
                 </div>
             </div>
         {{/each}}
