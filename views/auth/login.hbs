@@ -1,6 +1,16 @@
+<style>
+body {
+  background-image: url('/images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
 <div class="index-container">
     <div class="index-login">
         <h4>Already a user? Then Log In</h4>
+        <h5>If you are just passing, use "Recruiter" and "12345678".</h5>
         <form action="/auth/login" method="POST">
             <div>
                 <input type="text" class="text-form" name="username" placeholder="Username">

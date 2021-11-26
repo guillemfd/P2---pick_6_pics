@@ -3,47 +3,86 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
     font-family: 'Montserrat Alternates', sans-serif;
     color: whitesmoke;
     background-color: rgb(44, 44, 44);
-    padding: 40px 0;
+}
+
+h2{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 3rem;
 }
 
 header{
+    background-color: rgb(58, 58, 58);
     border-bottom: 2px solid lightslategray;
+    width: 100%;
+    content: '';
+    display: table;
 }
 
-.nav-container{
+
+
+/* .nav-container{
     width: 95%;
     margin: auto;
     display: flex;
-}
+} */
 
 .nav{
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+    float: right;
+    padding-top: 75px;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+    float: left;
     padding: 25px 0px;
 }
 
-.nav p{
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    transition: box-shadow 600ms ease-in-out, color 600ms ease-in-out;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 0 40px 40px #39d8d863 inset;
+    cursor: pointer;
+}
+
+
+/* .nav p{
     margin-top: 10px;
     font-size: 14rem;
-}
+} */
 
 .logo{
-    width: 500px;
+    width: 400px;
+    float: left;
+    padding: 8px;
+    margin: 15px;
 }
 
-.nav p{
+/* .nav p{
     font-size: 0.97rem;
 }
 
 .nav-menu{
-    display: flex;
+    justify-content: flex-end;
+    padding: 50px 15px;
 }
 
 .nav-menu a{
@@ -51,24 +90,30 @@ header{
     font-size: 1.3rem;
     color: whitesmoke;
     flex-direction: row;
-    justify-content: flex-end;
-    padding: 100px 15px;
+
 }
 
 .nav-btn{
     color: whitesmoke;
-}
+} */
 
 /* ------------------------------------------------------------------ NAV ------------------------------------------------- */
-/* ----------------------------------------------------------------- HOME ------------------------------------------------- */
 
+/* ----------------------------------------------------------------- HOME ------------------------------------------------- */
 .text-form {
     width: 300px;
     height: 40px;
     margin-top: 20px;
+    padding-left: 8px;
     border-radius: 10px;
     border-color: 2px solid #39D8D8;
+    transition: 1s;
 }
+
+.text-form:hover{
+    color: brown;
+}
+
 
 #authButton {
     color:whitesmoke;
@@ -88,6 +133,7 @@ header{
 
 #authButton:hover {
     box-shadow: 0 0 40px 40px #39D8D8 inset;
+    cursor: pointer;
 }
 
 .index-container {
@@ -98,6 +144,7 @@ header{
 }
 
 .index-login {
+    background-color: rgba(0, 0, 0, 0.596);
     font-size: 1em;
     text-align: center;
     border: 1px solid #eee;
@@ -110,6 +157,7 @@ header{
 }
 
 .index-signup {
+    background-color: rgba(0, 0, 0, 0.596);
     font-size: 1em;
     text-align: center;
     border: 1px solid #eee;
@@ -123,7 +171,7 @@ header{
 
 /* ----------------------------------------------------------------- HOME ------------------------------------------------- */
 
-.search-box{
+/* .search-box{
     position: relative;
     width: 500px;
 }
@@ -153,7 +201,7 @@ input:focus{
 
 .search-box i:hover{
     color: brown;
-}
+} */
 
 /* .grid{
     width: 100%;
@@ -180,7 +228,7 @@ img {
 
 .gallery-title{
     text-align: center;
-    font-size: 5em;
+    font-size: 3rem;
 }
 
 /* .gallery-container {
@@ -196,7 +244,6 @@ img {
     column-gap: 0.3rem;
     row-gap: 0.3rem;
     flex: 33%;
-
 }
 
 .gallery img {
@@ -241,8 +288,29 @@ transition: transform 400ms ease-out;
 
 #favButton:hover {
     box-shadow: 0 0 40px 40px #ff3232 inset;
+    cursor: pointer;
 }
 
+#unFavButton {
+    color:whitesmoke;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;  
+    background-color: #ff000000;
+    border: 1px solid #d83939;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 1em;
+    width: 160px;
+    height: 40px;
+    border-radius: 50px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#unFavButton:hover {
+    box-shadow: 0 0 40px 40px #ffbb00 inset;
+    cursor: pointer;
+}
 
 /* ------SEARCH BUTTONS----------------SEARCH BUTTONS----------------SEARCH BUTTONS----------------SEARCH BUTTONS---------- */
 #africaBtn {
@@ -257,13 +325,14 @@ transition: transform 400ms ease-out;
     font-size: 2.3em;
     width: 300PX;
     width: 100%;
-    height: 60px;
+    height: 100px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 #africaBtn:hover {
     box-shadow: 0 0 40px 40px #a52727 inset;
+    cursor: pointer;
 }
 
 
@@ -279,13 +348,14 @@ transition: transform 400ms ease-out;
     font-size: 2.3em;
     width: 300PX;
     width: 100%;
-    height: 60px;
+    height: 100px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 #americaBtn:hover {
     box-shadow: 0 0 40px 40px #ca870a inset;
+    cursor: pointer;
 }
 
 #antarticaBtn {
@@ -300,7 +370,7 @@ transition: transform 400ms ease-out;
     font-size: 2.3em;
     width: 300PX;
     width: 100%;
-    height: 60px;
+    height: 100px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
@@ -308,6 +378,7 @@ transition: transform 400ms ease-out;
 #antarticaBtn:hover {
     box-shadow: 0 0 40px 40px #ffffff inset;
     color: grey;
+    cursor: pointer;
 }
 
 #asiaBtn {
@@ -322,13 +393,14 @@ transition: transform 400ms ease-out;
     font-size: 2.3em;
     width: 300PX;
     width: 100%;
-    height: 60px;
+    height: 100px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 #asiaBtn:hover {
     box-shadow: 0 0 40px 40px #babd23 inset;
+    cursor: pointer;
 }
 
 #europeBtn {
@@ -343,13 +415,14 @@ transition: transform 400ms ease-out;
     font-size: 2.3em;
     width: 300PX;
     width: 100%;
-    height: 60px;
+    height: 100px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 #europeBtn:hover {
     box-shadow: 0 0 40px 40px #251abb inset;
+    cursor: pointer;
 }
 
 #oceaniaBtn {
@@ -364,13 +437,14 @@ transition: transform 400ms ease-out;
     font-size: 2.3em;
     width: 300px;
     width: 100%;
-    height: 60px;
+    height: 100px;
     border-radius: 50px;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 #oceaniaBtn:hover {
     box-shadow: 0 0 40px 40px #1ab6bb inset;
+    cursor: pointer;
 }
 
 .search-row{
