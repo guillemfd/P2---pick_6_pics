@@ -25,26 +25,6 @@ router.get("/login", isLoggedOut, (req, res)=>{
 })
 
 
-//--------------------------------- NOT USING ----------------------------------- NOT USING --------
-// /* POST create new user */
-// router.post("/signup", isLoggedOut, async (req, res)=>{
-
-//   const {username, password} = req.body; 
-
-//   try{
-
-//     const hashedPassword = await bcrypt.hash(password, 10)
-
-//     const createdUser = await User.create({username, password: hashedPassword})
-//     res.render("auth/signup", {justCreatedUser: createdUser.username})
-//   }catch(err){
-//     console.log(err)
-//   }
-// })
-//--------------------------------- NOT USING ----------------------------------- NOT USING --------
-
-
-
 
 //POST para crear un nuevo usuario -------------------------------------------------------------
 router.post("/signup", async (req, res, next) => {
@@ -98,16 +78,14 @@ router.post("/signup", async (req, res, next) => {
 //----------------------------------------------------------------------------------------------
 
 
-// POST log in
+// POST log in--------------------------------------------------------------------
 
 router.post('/login', async (req, res)=>{
   const {username, password} = req.body
-  // console.log(req.body)
 
   if(!username || !password){ //Si dejan algun campo vacio
     res.render("auth/login", {msg: "You need to fill all inputs"})
   }
-  // console.log('hola')
   const userFromDB = await User.findOne({username})
   if(!userFromDB){ //Si el usuario no existe
     res.render("auth/login", {msg: "The user does not exist"})
@@ -117,13 +95,13 @@ router.post('/login', async (req, res)=>{
       res.render("auth/login", {msg: "Incorrect password"})
     } else {
       req.session.loggedUser = userFromDB
-      console.log('SESSION ======> ', req.session)
+      // console.log('SESSION ======> ', req.session)
       res.redirect('/search')
     }
   }
 })
 
-//POST logout 
+//POST logout --------------------------------------------------------------------
 router.get('/logout', (req, res, next) => {
   
   res.clearCookie('connect.sid', {path: '/',})

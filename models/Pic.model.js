@@ -8,7 +8,7 @@ const picSchema = new Schema(
     portfolio: { type: String },
     downloads: {type: Number},
     fullimage: { type: String },
-    //continent: {enum: ['Africa', 'Oceania']} //TODO: finish
+    //continent: {enum: ['Africa', 'Oceania']} //TODO: finish. Para en la V2 poder saber si ese continente ya tiene fav
   },
   { timestamps: true }
 );

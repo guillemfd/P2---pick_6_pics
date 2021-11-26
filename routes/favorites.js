@@ -1,8 +1,5 @@
 const router = require("express").Router();
-const chalk = require("chalk");
 const axios = require("axios");
-// const Character = require("../models/Character.model");
-// const User = require("../models/User.model");
 const {isLoggedIn} = require("../middleware/route-gard");
 const Pic = require("../models/Pic.model");
 const User = require("../models/User.model");
@@ -17,17 +14,15 @@ router.get("/", isLoggedIn, async (req, res, next) => {
 });
 
 
-
 //---------- CREATE FAVORITE PICS BY id ----------------------------------------------------------------------------------------------------------------
-router.post("/create/:id", async (req, res) => {  //:continent como params 
+router.post("/create/:id", async (req, res) => { 
 
-  //llamada a base de datos y comprobar que en el array de pics del usuario no hay ninguna pic con el continente recibido por params
+  //Para la versión V2; hacer llamada a base de datos y comprobar que en el array de pics del usuario no hay ninguna
+  //pic con el continente recibido por params. (Para que no puedan haber más de una foto favorita por continente)
 
   const axiosCall = await axios(`https://api.unsplash.com/photos/${req.params.id}?client_id=${process.env.API_KEY}&hash=${process.env.HASH}`)
-    // console.log(axiosCall.data)
   const infoFromPic = axiosCall.data
-    // console.log("hola")
-    // console.log(infoFromPic)
+
   const dataToUpload = {
     image: infoFromPic.urls.regular,
     photographer: infoFromPic.user.name,
@@ -58,13 +53,5 @@ router.post("/delete/:id", async (req, res) => {
     }
     res.redirect(`/favorites`)
 });
-
-// router.post("/delete/:id", async (req, res) => { 
-  // await User.findByIdAndUpdate(req.session.loggedUser._id,
-  //   {$pop: {pics}},);
-
-//   res.redirect(`/favorites`)
-// });
-
 
 module.exports = router;
