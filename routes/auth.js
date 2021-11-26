@@ -105,16 +105,16 @@ router.post('/login', async (req, res)=>{
   // console.log(req.body)
 
   if(!username || !password){ //Si dejan algun campo vacio
-    res.render("auth/login", {errorMsg: "You need to fill all inputs"})
+    res.render("auth/login", {msg: "You need to fill all inputs"})
   }
   // console.log('hola')
   const userFromDB = await User.findOne({username})
   if(!userFromDB){ //Si el usuario no existe
-    res.render("auth/login", {errorMsg: "The user does not exist"})
+    res.render("auth/login", {msg: "The user does not exist"})
   } else { //Si el usuario existe
     const passwordsMatch = await bcrypt.compare(password, userFromDB.password)
     if(!passwordsMatch){ //Si la contraseña introducida no es correcta
-      res.render("auth/login", {errorMsg: "Incorrect password"})
+      res.render("auth/login", {msg: "Incorrect password"})
     } else {
       req.session.loggedUser = userFromDB
       console.log('SESSION ======> ', req.session)
